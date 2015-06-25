@@ -1,0 +1,18 @@
+
+<section class="calculator" ng-controller="CalculatorController">
+<div ng-controller="DisplayController">
+    <display-view value={{myvalue}}></display-view>
+    </div>
+    <div>
+        <span ng-controller="NumericButtonController">
+        	<div ng-repeat="numbutton in numdata">
+				<numeric-button-view class="{{numbutton.type}}" value="{{numbutton.value}}"></numeric-button-view>
+			</div>
+		</span>
+        <span ng-controller="OperatorButtonController">
+        	<div ng-repeat="oprbutton in opdata">
+        		<operator-button-view class="{{oprbutton.type}}" value="{{oprbutton.value}}"></operator-button-view>
+        	</div>		
+		</span>
+    </div>
+</section>
